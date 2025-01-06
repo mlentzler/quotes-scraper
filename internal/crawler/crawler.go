@@ -8,8 +8,8 @@ import (
 
 
 
-func Crawl(link string) (string, error){
-  return fetch(link)
+func Crawl(link string) {
+  fmt.Printf("Crawling URL: %s\n", link)
 }
 
 func Fetch (url string) (string, error) {
