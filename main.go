@@ -23,7 +23,7 @@ func main() {
 		return
 	}
 	for _, qoute := range qoutes {
-		fmt.Printf("Qoute: %s\n", qoute.Text)
+		fmt.Printf("Quote: %s\n", qoute.Text)
 		fmt.Printf("Author: %s\n", qoute.Author)
 	}
 }
