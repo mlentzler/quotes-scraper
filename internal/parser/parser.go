@@ -40,18 +40,3 @@ func ParseQuotes(html string) ([]Quote, error) {
 
 	return qoutes, nil
 }
-
-func FindNextPage(html string) (string, error) {
-	reader := strings.NewReader(html)
-	doc, err := goquery.NewDocumentFromReader(reader)
-	if err != nil {
-		return "", fmt.Errorf("failed to parse HTML: %v", err)
-	}
-
-	nextLink, exists := doc.Find("a[rel='next']").Attr("href")
-	if !exists {
-		return "", fmt.Errorf("no next page found")
-	}
-
-	return nextLink, nil
-}
