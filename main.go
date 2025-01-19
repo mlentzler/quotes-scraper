@@ -11,7 +11,7 @@ func main() {
 	url := "https://quotes.toscrape.com"
 	fmt.Printf("Fetching URL: %s\n", url)
 
-	html, err := crawler.Fetch(url)
+	html, err := crawler.FetchAllPages(url)
 	if err != nil {
 		fmt.Errorf("Error Occured while fetching: %v\n", err)
 		return
